@@ -68,8 +68,36 @@
 }
 
 .contact-heading {
+  height: 16px;
+  width: 60px;
+  margin-top: 14px;
+  margin-left: 151px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
 }
 .contact-container {
 }
 .contact-icons-container {
+  height: 16px;
+  width: 111px;
+  margin-top: 64px;
+  margin-left: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.google-icon {
+  height: 16px;
+  width: 14px;
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.7143px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
 }

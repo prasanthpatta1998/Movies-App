@@ -20,10 +20,10 @@ const Home = () => (
       <OriginalMovies />
 
       <div className="contact-icons-container">
-        <FaGoogle />
-        <FaTwitter />
-        <FaInstagram />
-        <FaYoutube />
+        <FaGoogle className="google-icon" />
+        <FaTwitter className="google-icon" />
+        <FaInstagram className="google-icon" />
+        <FaYoutube className="google-icon" />
       </div>
       <p className="contact-heading">Contact</p>
     </div>
