@@ -1,0 +1,8 @@
+.original-slider {
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 24px;
+}

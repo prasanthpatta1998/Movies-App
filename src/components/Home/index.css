@@ -1,4 +1,5 @@
 .home-container {
+  background-color: #131313;
   height: 782px;
   width: 360px;
 }
@@ -9,13 +10,11 @@
 }
 
 .home-linear-background {
-  height: 782px;
-  width: 360px;
   left: 0%;
   right: 0%;
   top: 36.45%;
   bottom: 42.84%;
-
+  height: 126px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -66,4 +65,11 @@
   margin-left: 32px;
   border: 0px;
   margin-top: 24px;
+}
+
+.contact-heading {
+}
+.contact-container {
+}
+.contact-icons-container {
 }
