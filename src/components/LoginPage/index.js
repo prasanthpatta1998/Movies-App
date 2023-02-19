@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
+import Cookies from 'js-cookie'
 
 import './index.css'
 
@@ -8,6 +10,12 @@ class LoginPage extends Component {
     password: '',
     fetchingData: false,
     errorMsg: '',
+  }
+
+  getLoginTheUser = jwtToken => {
+    const {history} = this.props
+    Cookies.set('jwt_token', jwtToken, {expires: 7})
+    history.replace('/')
   }
 
   getDisplayErrorMsg = error => {
@@ -26,7 +34,7 @@ class LoginPage extends Component {
     const response = await fetch(url, options)
     const data = await response.json()
     if (response.ok === true) {
-      console.log('Hello')
+      this.getLoginTheUser(data.jwt_token)
     } else {
       this.getDisplayErrorMsg(data.error_msg)
     }
@@ -44,6 +52,10 @@ class LoginPage extends Component {
   render() {
     const {username, password, fetchingData, errorMsg} = this.state
 
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect path="/" />
+    }
     return (
       <div className="login-page-container">
         <img
