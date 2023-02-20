@@ -1,0 +1,12 @@
+.search-background-container {
+  background-color: #131313;
+  height: 640px;
+  width: 360px;
+}
+
+@media screen and (min-width: 768px) {
+  .search-background-container {
+    height: 1024px;
+    width: 1440px;
+  }
+}

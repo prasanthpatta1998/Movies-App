@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import {HiOutlineSearch} from 'react-icons/hi'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {Component} from 'react'
@@ -7,6 +7,14 @@ import './index.css'
 class Header extends Component {
   state = {
     smHamburger: false,
+    searchInput: '',
+    searchFunction: 'false',
+  }
+
+  componentDidMount() {
+    const {boolValue} = this.props
+    console.log(typeof boolValue)
+    this.setState({searchFunction: boolValue})
   }
 
   onChangeHamburger = () => {
@@ -17,8 +25,60 @@ class Header extends Component {
     this.setState({smHamburger: false})
   }
 
+  onChangeToSearchPage = () => {
+    const {history} = this.props
+    history.replace('/search')
+  }
+
+  renderSearchInput = () => {
+    const {searchInput} = this.state
+
+    return (
+      <div className="search-input-container">
+        <input
+          type="search"
+          value={searchInput}
+          onChange={this.onChangeSearchInputValue}
+          placeholder="Search"
+          className="header-search-input"
+        />
+        <button
+          type="button"
+          className="header-search-button-type"
+          onClick={this.onChangeToSearchPage}
+        >
+          <HiOutlineSearch className="search-icon-type" />
+        </button>
+      </div>
+    )
+  }
+
+  renderSearchIcon = () => (
+    <button
+      type="button"
+      className="header-search-button"
+      onClick={this.onChangeToSearchPage}
+    >
+      <HiOutlineSearch className="search-icon" />
+    </button>
+  )
+
+  renderMdSearchIcon = () => (
+    <button
+      type="button"
+      className="md-header-search-button"
+      onClick={this.onChangeToSearchPage}
+    >
+      <HiOutlineSearch className="md-search-icon" />
+    </button>
+  )
+
+  onChangeSearchInputValue = event => {
+    this.setState({searchInput: event.target.value})
+  }
+
   render() {
-    const {smHamburger} = this.state
+    const {smHamburger, searchFunction} = this.state
     return (
       <>
         <nav className="header-container">
@@ -31,9 +91,9 @@ class Header extends Component {
               />
             </Link>
             <div className="search-container">
-              <button type="button" className="header-search-button">
-                <HiOutlineSearch className="search-icon" />
-              </button>
+              {searchFunction === 'true'
+                ? this.renderSearchInput()
+                : this.renderSearchIcon()}
               <button
                 type="button"
                 className="hamburger-button"
@@ -87,9 +147,9 @@ class Header extends Component {
             </Link>
           </ul>
           <div className="profile-container">
-            <button type="button" className="md-header-search-button">
-              <HiOutlineSearch className="md-search-icon" />
-            </button>
+            {searchFunction === 'true'
+              ? this.renderSearchInput()
+              : this.renderMdSearchIcon()}
             <img
               src="https://res.cloudinary.com/duezhxznc/image/upload/v1676874683/Avatar_ywnmti.png"
               alt="profile"
@@ -102,4 +162,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default withRouter(Header)

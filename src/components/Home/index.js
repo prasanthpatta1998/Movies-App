@@ -7,7 +7,7 @@ import './index.css'
 const Home = () => (
   <div className="home-container">
     <div className="home-background-container">
-      <Header />
+      <Header boolValue="false" />
       <h1 className="home-heading">Super Man</h1>
       <p className="home-description">
         Superman is a fictional superhero who first appeared in American comic

@@ -41,7 +41,7 @@ class Popular extends Component {
 
     return (
       <div className="popular-container">
-        <Header />
+        <Header boolValue="false" />
         <ul className="popular-ul-item">
           {popularMovies.map(eachMovie => {
             const {id, backdropPath, title} = eachMovie
