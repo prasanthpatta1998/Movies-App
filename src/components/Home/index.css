@@ -1,13 +1,13 @@
 .home-container {
   background-color: #131313;
-  height: 782px;
+  min-height: 782px;
   width: 360px;
 }
 
 @media screen and (min-width: 768px) {
   .home-container {
     width: 1440px;
-    height: 1356px;
+    min-height: 1356px;
   }
 }
 
@@ -116,6 +116,9 @@
   font-size: 12px;
   line-height: 16px;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
 }
 
 @media screen and (min-width: 768px) {

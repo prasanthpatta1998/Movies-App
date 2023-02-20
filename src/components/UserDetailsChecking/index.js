@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 const UserDetailsChecking = props => {
   const jwtToken = Cookies.get('jwt_token')
   if (jwtToken === undefined) {
-    return <Redirect path="/login" />
+    return <Redirect to="/login" />
   }
   return <Route {...props} />
 }

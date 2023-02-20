@@ -52,7 +52,7 @@ class Header extends Component {
               <Link to="/">
                 <li className="hamburg-items">Home</li>
               </Link>
-              <Link to="/">
+              <Link to="/popular">
                 <li className="hamburg-items">Popular</li>
               </Link>
               <Link to="/">
@@ -82,7 +82,7 @@ class Header extends Component {
             <Link to="/">
               <li className="md-hamburg-items">Home</li>
             </Link>
-            <Link to="/">
+            <Link to="/popular">
               <li className="md-hamburg-items-2">Popular</li>
             </Link>
           </ul>
