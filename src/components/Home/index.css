@@ -4,9 +4,24 @@
   width: 360px;
 }
 
+@media screen and (min-width: 768px) {
+  .home-container {
+    width: 1440px;
+    height: 1356px;
+  }
+}
+
 .home-background-container {
   background-image: url('https://res.cloudinary.com/duezhxznc/image/upload/v1676787339/wp2581913-man-of-steel-wallpaper_1_thfcg5.png');
   height: 427px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-background-container {
+    background-image: url('https://res.cloudinary.com/duezhxznc/image/upload/v1676874038/Image_fgdtzl.png');
+    height: 605px;
+    width: 1440px;
+  }
 }
 
 .home-linear-background {
@@ -38,6 +53,17 @@
   margin-bottom: 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .home-heading {
+    margin-left: 165px;
+    font-size: 64px;
+    line-height: 62px;
+    height: 62px;
+    width: 312px;
+    margin-top: 120px;
+  }
+}
+
 .home-description {
   font-family: 'HK Grotesk';
   font-style: normal;
@@ -49,6 +75,18 @@
   width: 296px;
   height: 63px;
   margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-description {
+    height: 78px;
+    width: 443px;
+    margin-left: 165px;
+    margin-top: 24px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 0px;
+  }
 }
 
 .home-button {
@@ -79,6 +117,21 @@
   line-height: 16px;
   color: #ffffff;
 }
+
+@media screen and (min-width: 768px) {
+  .home-button {
+    margin-left: 165px;
+    margin-top: 32px;
+    height: 40px;
+    width: 74px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .contact-heading {
+  }
+}
+
 .contact-container {
 }
 .contact-icons-container {
@@ -100,4 +153,28 @@
   line-height: 16px;
   text-align: center;
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-icons-container {
+    margin-top: 94px;
+    margin-left: 648px;
+    height: 21px;
+    width: 145px;
+  }
+
+  .google-icon {
+    width: 18px;
+    height: 21px;
+  }
+
+  .contact-heading {
+    margin-left: 680px;
+    height: 24px;
+    width: 80px;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -45,3 +45,29 @@
   width: 90px;
   border-radius: 8px;
 }
+@media screen and (min-width: 768px) {
+  .main-container {
+    margin-top: 0px;
+  }
+
+  .trending-now-heading {
+    margin-left: 125px;
+    margin-top: 194px;
+    height: 31px;
+    width: 148px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  .logo-image {
+    height: 170px;
+    width: 250px;
+  }
+
+  .slick-container {
+    max-width: 1000%;
+    margin-left: 102px;
+    margin-right: 102px;
+    margin-top: 24px;
+  }
+}

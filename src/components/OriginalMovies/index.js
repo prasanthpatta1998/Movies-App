@@ -7,7 +7,7 @@ const settings = {
   dots: false,
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
     {
@@ -71,10 +71,10 @@ class OriginalMovies extends Component {
     return (
       <Slider {...settings}>
         {originalList.map(eachLogo => {
-          const {id, posterPath, title} = eachLogo
+          const {id, backdropPath, title} = eachLogo
           return (
             <div className="slick-item" key={id}>
-              <img className="logo-image" src={posterPath} alt={title} />
+              <img className="logo-image" src={backdropPath} alt={title} />
             </div>
           )
         })}
@@ -85,7 +85,7 @@ class OriginalMovies extends Component {
   render() {
     return (
       <div className="original-slider">
-        <h1 className="trending-now-heading">Originals</h1>
+        <h1 className="original-now-heading">Originals</h1>
         <div className="slick-container">{this.renderSlider()}</div>
       </div>
     )

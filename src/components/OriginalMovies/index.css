@@ -6,3 +6,31 @@
   justify-content: flex-start;
   margin-top: 24px;
 }
+
+.original-now-heading {
+  height: 21px;
+  width: 99px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .original-slider {
+    margin-top: 0px;
+  }
+  .original-now-heading {
+    margin-left: 125px;
+    height: 31px;
+    width: 148px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 32px;
+  }
+}

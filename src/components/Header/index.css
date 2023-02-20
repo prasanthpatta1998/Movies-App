@@ -1,12 +1,28 @@
 .header-container {
-  background: #131313;
-  opacity: 0.2;
+  background: rgb(19, 19, 19, 0.2);
   display: flex;
-  height: 75px;
-  justify-content: space-between;
+  flex-direction: column;
+  min-height: 75px;
   padding-left: 32px;
   padding-right: 32px;
-  align-items: center;
+}
+
+.md-header-container {
+  display: none;
+}
+
+@media screen and (max-height: 768px) {
+  .header-container {
+    display: none;
+  }
+  .md-header-container {
+    display: block;
+    height: 103px;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(19, 19, 19, 0.2);
+    align-items: center;
+  }
 }
 
 .home-movies-heading {
@@ -34,6 +50,138 @@
 }
 
 .search-icon-image {
-  margin-left: 24px;
   height: 24px;
+  width: 24px;
+}
+
+.movies-hamburg-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.hamburger-button {
+  background: transparent;
+  height: 24px;
+  width: 24px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+}
+
+.sm-tabs-container {
+  padding-left: 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburg-items {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.355556px;
+  color: #ffffff;
+  height: 26px;
+}
+
+.hamburg-items-1 {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.355556px;
+  color: #ffffff;
+  height: 20px;
+}
+
+.hamburg-item-button {
+  background: transparent;
+  border: 0px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburg-close-image {
+  color: #ffffff;
+  height: 20px;
+  width: 20px;
+}
+
+.md-header-container {
+}
+.md-movies-hamburg-container {
+  display: flex;
+  padding-left: 0px;
+  list-style-type: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 32px;
+  margin-left: 165px;
+  align-items: center;
+}
+
+.md-home-movies-heading {
+  height: 39px;
+  width: 135px;
+}
+
+.profile-container {
+  margin-right: 165px;
+  display: flex;
+  align-items: center;
+}
+
+.md-hamburg-items {
+  margin-left: 48px;
+  height: 26px;
+  width: 42px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.355556px;
+  color: #ffffff;
+}
+
+.md-header-search-button {
+  background-color: transparent;
+  border: 0px;
+  height: 24px;
+  width: 24px;
+}
+
+.md-search-icon {
+  height: 24px;
+  width: 24px;
+  color: #ffffff;
+}
+
+.profile-image {
+  height: 48px;
+  width: 48px;
+  margin-left: 32px;
+}
+
+.md-hamburg-items-2 {
+  height: 26px;
+  width: 54px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.355556px;
+  color: #ffffff;
+  margin-left: 24px;
 }

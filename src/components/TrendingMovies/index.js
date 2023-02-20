@@ -7,7 +7,7 @@ const settings = {
   dots: false,
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
     {
@@ -71,10 +71,10 @@ class TrendingMovies extends Component {
     return (
       <Slider {...settings}>
         {trendingList.map(eachLogo => {
-          const {id, posterPath, title} = eachLogo
+          const {id, backdropPath, title} = eachLogo
           return (
             <div className="slick-item" key={id}>
-              <img className="logo-image" src={posterPath} alt={title} />
+              <img className="logo-image" src={backdropPath} alt={title} />
             </div>
           )
         })}
