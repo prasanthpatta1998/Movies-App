@@ -1,0 +1,135 @@
+.account-details-container {
+  background-color: #131313;
+  height: 640px;
+}
+
+.account-container {
+  background-color: #ffffff;
+  height: 407px;
+  padding-left: 32px;
+  padding-top: 32px;
+  padding-right: 32px;
+}
+
+.account-heading {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #131313;
+}
+
+.memberShip-container {
+  display: flex;
+  margin-top: 24px;
+}
+
+.membership-heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #94a3b8;
+  height: 23px;
+  width: 106px;
+}
+
+.member-account-details {
+  margin-left: 11px;
+}
+
+.member-userName {
+  margin-top: 0px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1e293b;
+  height: 21px;
+  width: 129px;
+  margin-bottom: 0px;
+}
+
+.member-password {
+  margin-bottom: 0px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #64748b;
+  height: 21px;
+  width: 168px;
+  margin-top: 6px;
+}
+
+.quality-type {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px 4px;
+  gap: 10px;
+  border: 1px solid #1e293b;
+  border-radius: 2px;
+  margin-top: 0px;
+  margin-left: 13px;
+  margin-bottom: 0px;
+}
+
+.horizontal-line {
+  background: #cbd5e1;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.horizontal-line-2 {
+  background: #cbd5e1;
+  border-radius: 10px;
+  margin-top: 24px;
+}
+
+.member-account-password-container {
+  display: flex;
+  margin-left: 11px;
+}
+.member-premium {
+  margin-top: 0px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1e293b;
+  height: 21px;
+  width: 64px;
+  margin-bottom: 0px;
+}
+
+.account-logout-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 10px;
+  background: #e50914;
+  border-radius: 4px;
+  height: 40px;
+  width: 89px;
+  border: 0px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 48px;
+  margin-left: 104px;
+}
