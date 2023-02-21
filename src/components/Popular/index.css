@@ -23,7 +23,7 @@
   margin-left: 32px;
   margin-right: 32px;
   justify-content: space-between;
-  height: 448px;
+  max-height: 448px;
   overflow: hidden;
 }
 
@@ -48,7 +48,7 @@
     margin-left: 165px;
     margin-right: 165px;
     margin-bottom: 0px;
-    height: 752px;
+    max-height: 752px;
     overflow: hidden;
   }
 }

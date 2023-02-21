@@ -13,7 +13,6 @@ class Header extends Component {
 
   componentDidMount() {
     const {boolValue} = this.props
-    console.log(typeof boolValue)
     this.setState({searchFunction: boolValue})
   }
 
@@ -28,6 +27,12 @@ class Header extends Component {
   onChangeToSearchPage = () => {
     const {history} = this.props
     history.replace('/search')
+  }
+
+  onShowResultsOfSearch = () => {
+    const {searchInput} = this.state
+    const {onSearchMovies} = this.props
+    onSearchMovies(searchInput)
   }
 
   renderSearchInput = () => {
@@ -45,7 +50,7 @@ class Header extends Component {
         <button
           type="button"
           className="header-search-button-type"
-          onClick={this.onChangeToSearchPage}
+          onClick={this.onShowResultsOfSearch}
         >
           <HiOutlineSearch className="search-icon-type" />
         </button>
@@ -115,7 +120,7 @@ class Header extends Component {
               <Link to="/popular">
                 <li className="hamburg-items">Popular</li>
               </Link>
-              <Link to="/">
+              <Link to="/account">
                 <li className="hamburg-items">Account</li>
               </Link>
               <li className="hamburg-items-1">
@@ -150,11 +155,13 @@ class Header extends Component {
             {searchFunction === 'true'
               ? this.renderSearchInput()
               : this.renderMdSearchIcon()}
-            <img
-              src="https://res.cloudinary.com/duezhxznc/image/upload/v1676874683/Avatar_ywnmti.png"
-              alt="profile"
-              className="profile-image"
-            />
+            <Link to="/account">
+              <img
+                src="https://res.cloudinary.com/duezhxznc/image/upload/v1676874683/Avatar_ywnmti.png"
+                alt="profile"
+                className="profile-image"
+              />
+            </Link>
           </div>
         </nav>
       </>
