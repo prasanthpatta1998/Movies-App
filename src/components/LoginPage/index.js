@@ -24,6 +24,7 @@ class LoginPage extends Component {
 
   loginTheUser = async event => {
     const {username, password} = this.state
+    console.log(username)
     event.preventDefault()
     const url = 'https://apis.ccbp.in/login'
     const userDetails = {username, password}
@@ -41,7 +42,6 @@ class LoginPage extends Component {
   }
 
   userInput = event => {
-    console.log(event.target.value)
     this.setState({username: event.target.value})
   }
 

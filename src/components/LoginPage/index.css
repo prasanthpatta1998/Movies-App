@@ -103,6 +103,7 @@
   color: #e2e8f0;
   padding-left: 16px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 .password-label {
@@ -131,6 +132,7 @@
   line-height: 24px;
   color: #e2e8f0;
   padding-left: 16px;
+  outline: none;
 }
 .form-button-container {
   background: #e50914;
