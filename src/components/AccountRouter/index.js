@@ -1,6 +1,6 @@
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Cookies from 'js-cookie'
-import UserDetails from '../../context/UserDetails'
+
 import Header from '../Header'
 import './index.css'
 

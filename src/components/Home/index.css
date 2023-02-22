@@ -12,12 +12,22 @@
 }
 
 .home-background-container {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 45.4%;
   background-image: url('https://res.cloudinary.com/duezhxznc/image/upload/v1676787339/wp2581913-man-of-steel-wallpaper_1_thfcg5.png');
   height: 427px;
 }
 
 @media screen and (min-width: 768px) {
   .home-background-container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 55.38%;
     background-image: url('https://res.cloudinary.com/duezhxznc/image/upload/v1676874038/Image_fgdtzl.png');
     height: 605px;
     width: 1440px;

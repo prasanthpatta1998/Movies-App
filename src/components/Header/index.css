@@ -1,10 +1,16 @@
 .header-container {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 92.42%;
   background: rgb(19, 19, 19, 0.2);
   display: flex;
   flex-direction: column;
   min-height: 75px;
   padding-left: 32px;
   padding-right: 32px;
+  z-index: 1;
 }
 
 .md-header-container {
