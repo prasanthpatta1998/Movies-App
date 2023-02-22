@@ -14,20 +14,8 @@
   background-size: cover;
 }
 
-.spanEl {
-  color: red;
-  height: 300px;
-  width: 400px;
-  display: block;
-}
 .detail-movie-image {
   display: none;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 62.92%;
-  z-index: -1;
 }
 
 .detail-movie-poster-image {
@@ -41,26 +29,6 @@
   height: 427px;
   background-size: cover;
   border-radius: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  .detail-movie-poster-image {
-    display: none;
-  }
-
-  .detail-movie-image {
-    display: block;
-    display: block;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 62.92%;
-    z-index: -1;
-    width: 1440px;
-    height: 501px;
-    border-radius: 8px;
-  }
 }
 
 .specific-movie-name {
@@ -484,7 +452,7 @@
   left: 8.89%;
   right: 8.89%;
   top: 69.9%;
-  height: 152px;
+  bottom: 12.96%;
   list-style-type: none;
   padding-left: 0px;
   display: flex;
@@ -494,7 +462,9 @@
   overflow: hidden;
 }
 .similar-li-item {
-  margin-bottom: 12px;
+  width: 90px;
+  height: 64px;
+  margin-bottom: 11px;
 }
 
 .similar-poste-path {
@@ -566,4 +536,366 @@
   /* identical to box height, or 133% */
 
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-detail-container {
+    height: 1351px;
+    width: 1440px;
+  }
+
+  .detail-movie-poster-image {
+    display: none;
+  }
+
+  .detail-movie-image {
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 62.92%;
+    height: 501px;
+    width: 1440px;
+    z-index: 0;
+    border-radius: 8px;
+  }
+
+  .specific-movie-name {
+    margin-top: 183px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 63px;
+    height: 63px;
+  }
+
+  .runtime {
+    margin-top: 260px;
+    margin-left: 167px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .movieCertificate {
+    margin-top: 260px;
+    margin-left: 245.5px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    height: 28px;
+    width: 55px;
+  }
+
+  .year {
+    margin-top: 260px;
+    margin-left: 317px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    height: 28px;
+    width: 55px;
+  }
+
+  .linear-gradient {
+    height: 167px;
+    margin-top: 335px;
+    top: 0;
+    right: 0;
+    left: 0;
+    border: 0;
+    width: 1440px;
+  }
+  .linear-gradient-horizontal {
+    width: 701px;
+    height: 501px;
+  }
+
+  .google {
+    margin-top: 1226px;
+    margin-left: 647px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+
+  .overview {
+    margin-top: 309px;
+    margin-left: 164px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    height: 78px;
+    width: 632px;
+    overflow: hidden;
+  }
+  .play-specific-movie {
+    margin-top: 419px;
+    margin-left: 164px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    height: 40px;
+    width: 74px;
+    border-radius: 3px;
+  }
+  .genres-list {
+    margin-top: 559px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    height: 96px;
+    width: 78px;
+    overflow: hidden;
+  }
+  .genres {
+    margin-top: 525px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    width: 58px;
+  }
+  .audio-available {
+    margin-top: 525px;
+    margin-left: 450px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    width: 125px;
+  }
+  .audio-languages {
+    margin-top: 559px;
+    margin-left: 450px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    height: 72px;
+    width: 59px;
+    overflow: hidden;
+  }
+
+  .rating-count {
+    margin-top: 525px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    width: 106px;
+  }
+  .vote-count {
+    margin-top: 559px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+    width: 51px;
+  }
+  .rating-average {
+    margin-top: 595px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 26px;
+    width: 121px;
+    font-size: 16px;
+  }
+
+  .vote-average {
+    margin-top: 629px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+  }
+  .budget {
+    margin-top: 525px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 26px;
+    width: 57px;
+    font-size: 16px;
+  }
+  .total-budget {
+    margin-top: 559px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 98px;
+    font-size: 14px;
+  }
+  .release-date {
+    margin-top: 595px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 26px;
+    width: 105px;
+    font-size: 16px;
+  }
+  .released-movie-date {
+    margin-top: 629px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 113px;
+    font-size: 14px;
+  }
+  .more-like-this {
+    margin-top: 703px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 31px;
+    width: 146px;
+  }
+
+  .similar-movies {
+    margin-top: 758px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 370px;
+    width: 1110px;
+    margin-right: 165px;
+    margin-bottom: 221px;
+  }
+  .similar-li-item {
+    width: 255px;
+    height: 170px;
+    margin-bottom: 30px;
+  }
+
+  .similar-poste-path {
+    width: 255px;
+    height: 170px;
+    border-radius: 8px;
+  }
+
+  .contact-heading-movie {
+    margin-top: 1263px;
+    margin-left: 680px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 80px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .twitter {
+    margin-top: 1226px;
+    margin-left: 689px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .instagram {
+    margin-top: 1226px;
+    margin-left: 731px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .facebook {
+    margin-top: 1226px;
+    margin-left: 771px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .google-icon {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
