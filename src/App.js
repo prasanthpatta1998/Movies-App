@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import LoginPage from './components/LoginPage'
 import UserDetailsChecking from './components/UserDetailsChecking'
 import './App.css'
@@ -7,6 +7,7 @@ import Popular from './components/Popular'
 import SearchMovieRouter from './components/SearchMovieRouter'
 import AccountRouter from './components/AccountRouter'
 import MovieDetailRouter from './components/MovieDetailRouter'
+import NotFound from './components/NotFound'
 
 const App = () => (
   <Switch>
@@ -20,6 +21,8 @@ const App = () => (
       path="/movies/:id"
       component={MovieDetailRouter}
     />
+    <Route path="/not-found" component={NotFound} />
+    <Redirect to="not-found" />
   </Switch>
 )
 

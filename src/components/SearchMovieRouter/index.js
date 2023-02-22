@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import './index.css'
@@ -52,9 +53,15 @@ class SearchMovieRouter extends Component {
           {searchResults.map(eachMovie => {
             const {id, backdropPath, title} = eachMovie
             return (
-              <li className="popular-movie-image" key={id}>
-                <img src={backdropPath} alt={title} className="popular-image" />
-              </li>
+              <Link to={`/movies/${id}`}>
+                <li className="popular-movie-image" key={id}>
+                  <img
+                    src={backdropPath}
+                    alt={title}
+                    className="popular-image"
+                  />
+                </li>
+              </Link>
             )
           })}
         </ul>

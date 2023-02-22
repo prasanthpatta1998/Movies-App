@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Cookies from 'js-cookie'
 import Header from '../Header'
@@ -44,11 +45,13 @@ class Popular extends Component {
         <Header boolValue="false" />
         <ul className="popular-ul-item">
           {popularMovies.map(eachMovie => {
-            const {id, backdropPath, title} = eachMovie
+            const {id, backdropPath, posterPath, title} = eachMovie
             return (
-              <li className="popular-movie-image" key={id}>
-                <img src={backdropPath} alt={title} className="popular-image" />
-              </li>
+              <Link to={`/movies/${id}`}>
+                <li className="popular-movie-image" key={id}>
+                  <img src={posterPath} alt={title} className="popular-image" />
+                </li>
+              </Link>
             )
           })}
         </ul>

@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import format from 'date-fns/format'
 import Cookies from 'js-cookie'
@@ -74,13 +75,15 @@ class MovieDetailsRouter extends Component {
         {similarMoviesList.map(eachMovie => {
           const {id, backdropPath, posterPath, title} = eachMovie
           return (
-            <li className="similar-li-item" key={eachMovie.id}>
-              <img
-                src={posterPath}
-                alt={title}
-                className="similar-poste-path"
-              />
-            </li>
+            <Link to={`/movies/${id}`}>
+              <li className="similar-li-item" key={eachMovie.id}>
+                <img
+                  src={backdropPath}
+                  alt={title}
+                  className="similar-poste-path"
+                />
+              </li>
+            </Link>
           )
         })}
       </ul>
@@ -118,7 +121,7 @@ class MovieDetailsRouter extends Component {
     }))
 
     const releasedDate = format(new Date(releaseDate), 'Mo MMMM yyyy')
-    console.log(releasedDate)
+    console.log(runtime)
 
     return (
       <>

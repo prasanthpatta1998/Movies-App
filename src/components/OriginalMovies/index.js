@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
 import './index.css'
@@ -73,9 +74,11 @@ class OriginalMovies extends Component {
         {originalList.map(eachLogo => {
           const {id, backdropPath, title} = eachLogo
           return (
-            <div className="slick-item" key={id}>
-              <img className="logo-image" src={backdropPath} alt={title} />
-            </div>
+            <Link to={`/movies/${id}`}>
+              <div className="slick-item" key={id}>
+                <img className="logo-image" src={backdropPath} alt={title} />
+              </div>
+            </Link>
           )
         })}
       </Slider>
