@@ -4,9 +4,208 @@
   width: 360px;
 }
 
+.search-ul-item {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 15.47%;
+  bottom: 14.53%;
+
+  border-radius: 8px;
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.search-image {
+  height: 100px;
+  width: 90px;
+  border-radius: 8px;
+}
+
+.search-movie-image {
+  margin-bottom: 16px;
+}
+
+.search-loader-container {
+}
+
+.search-failure-view {
+  position: absolute;
+  left: 17.78%;
+  right: 17.5%;
+  top: 27.81%;
+  bottom: 45.31%;
+  height: 172px;
+  width: 233px;
+}
+
+.search-failure-view-name {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 55.44%;
+  bottom: 37.81%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.search-failure-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 35.14%;
+  right: 35.14%;
+  top: 64.94%;
+  bottom: 28.81%;
+
+  border-radius: 3px;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  border: 0px;
+  /* identical to box height, or 171% */
+
+  /* General/Dark blue */
+
+  color: #171f46;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-invalid-data {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 57.88%;
+  bottom: 30.62%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  text-align: center;
+
+  color: #ffffff;
+  height: ;
+}
+
+.search-invalid-view {
+  position: absolute;
+  left: 20.83%;
+  right: 20.97%;
+  top: 30.62%;
+  bottom: 41.88%;
+}
+
 @media screen and (min-width: 768px) {
   .search-background-container {
     height: 1024px;
     width: 1440px;
+  }
+
+  .search-ul-item {
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin-top: 135px;
+    margin-left: 165px;
+    height: 765px;
+    width: 1110px;
+  }
+
+  .search-image {
+    height: 170px;
+    width: 255px;
+  }
+
+  .search-movie-image {
+    margin-bottom: 24px;
+  }
+
+  .search-failure-view {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 276px;
+    width: 375px;
+    margin-top: 307px;
+    margin-left: 532px;
+  }
+
+  .search-failure-view-name {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 31px;
+    width: 430px;
+    margin-top: 615px;
+    margin-left: 505px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .search-failure-button {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 48px;
+    width: 110px;
+    margin-top: 670px;
+    margin-left: 665px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .search-invalid-view {
+    position: absolute;
+    width: 450px;
+    height: 378px;
+    left: 495px;
+    top: 284px;
+  }
+
+  .search-invalid-data {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 710px;
+    height: 31px;
+    width: 1440px;
+    text-align: center;
   }
 }

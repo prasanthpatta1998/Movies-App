@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import format from 'date-fns/format'
 import Cookies from 'js-cookie'
@@ -24,6 +25,7 @@ class MovieDetailsRouter extends Component {
   }
 
   getMovieDetails = async () => {
+    this.setState({movieStatus: movieApiStatus.inProgress})
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -56,6 +58,8 @@ class MovieDetailsRouter extends Component {
       }
       console.log(newData)
       this.setState({movieData: newData, movieStatus: movieApiStatus.success})
+    } else {
+      this.setState({movieStatus: movieApiStatus.failure})
     }
   }
 
@@ -130,7 +134,6 @@ class MovieDetailsRouter extends Component {
           alt={title}
           className="detail-movie-poster-image"
         />
-        <Header boolValue="false" />
         <h1 className="specific-movie-name">{title}</h1>
         <p className="runtime">{`${hours}h ${minutes}m`}</p>
         <p className="movieCertificate">{`${movieCertificate}`}</p>
@@ -176,12 +179,53 @@ class MovieDetailsRouter extends Component {
     )
   }
 
-  getRenderTheStatus = () => {
-    const {movieStatus} = this.state
+  renderMovieLoader = () => (
+    <div className="popular-loader-container" testid="loader">
+      <Loader
+        type="TailSpin"
+        color="#D81F26"
+        height={50}
+        width={50}
+        className="popular-loader"
+      />
+    </div>
+  )
 
+  onRefreshMoviePage = () => {
+    this.getMovieDetails()
+  }
+
+  renderMovieFailure = () => (
+    <div className="search-loader-container">
+      <img
+        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677152293/Background-Complete_ojhbus.png"
+        alt="failure"
+        className="search-failure-view"
+      />
+      <p className="search-failure-view-name">
+        Something went wrong. Please try again
+      </p>
+      <button
+        type="button"
+        className="search-failure-button"
+        onClick={this.onRefreshMoviePage}
+      >
+        Try Again
+      </button>
+    </div>
+  )
+
+  renderMovieSuccess = () => this.getRenderMovieData()
+
+  renderMoviesData = () => {
+    const {movieStatus} = this.state
     switch (movieStatus) {
+      case movieApiStatus.inProgress:
+        return this.renderMovieLoader()
       case movieApiStatus.success:
-        return this.getRenderMovieData()
+        return this.renderMovieSuccess()
+      case movieApiStatus.failure:
+        return this.renderMovieFailure()
       default:
         return null
     }
@@ -189,7 +233,10 @@ class MovieDetailsRouter extends Component {
 
   render() {
     return (
-      <div className="movie-detail-container">{this.getRenderTheStatus()}</div>
+      <div className="movie-detail-container">
+        <Header boolValue="false" />
+        {this.renderMoviesData()}
+      </div>
     )
   }
 }
