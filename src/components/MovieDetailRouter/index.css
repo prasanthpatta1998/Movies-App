@@ -134,6 +134,7 @@
   height: 63px;
   overflow: auto;
   z-index: 2;
+  overflow: auto;
 }
 .play-specific-movie {
   display: flex;
@@ -650,8 +651,7 @@
     font-size: 18px;
     line-height: 23px;
     height: 78px;
-    width: 632px;
-    overflow: hidden;
+    width: 1110px;
   }
   .play-specific-movie {
     margin-top: 419px;

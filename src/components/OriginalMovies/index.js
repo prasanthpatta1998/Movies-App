@@ -104,6 +104,10 @@ class OriginalMovies extends Component {
     )
   }
 
+  onRefreshOriginalMovies = () => {
+    this.getOriginalMovies()
+  }
+
   renderOriginalLoader = () => (
     <div className="Original-loader-container" testid="loader">
       <Loader
@@ -119,7 +123,27 @@ class OriginalMovies extends Component {
   renderOriginalSuccess = () => (
     <div className="original-slider">
       <h1 className="original-now-heading">Originals</h1>
-      <div className="slick-container">{this.renderSlider()}</div>
+      <div className="original-slick-container">{this.renderSlider()}</div>
+    </div>
+  )
+
+  renderOriginalFailure = () => (
+    <div className="Original-loader-container">
+      <img
+        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
+        alt="failure"
+        className="trending-failure-view"
+      />
+      <p className="trending-failure-view-name">
+        Something went wrong. Please try again
+      </p>
+      <button
+        type="button"
+        className="trending-failure-button"
+        onClick={this.onRefreshOriginalMovies}
+      >
+        Try Again
+      </button>
     </div>
   )
 

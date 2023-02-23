@@ -45,23 +45,27 @@ class Popular extends Component {
         <Header boolValue="false" />
         <ul className="popular-ul-item">
           {popularMovies.map(eachMovie => {
-            const {id, backdropPath, posterPath, title} = eachMovie
+            const {id, backdropPath, title} = eachMovie
             return (
               <Link to={`/movies/${id}`}>
                 <li className="popular-movie-image" key={id}>
-                  <img src={posterPath} alt={title} className="popular-image" />
+                  <img
+                    src={backdropPath}
+                    alt={title}
+                    className="popular-image"
+                  />
                 </li>
               </Link>
             )
           })}
         </ul>
         <div className="contact-icons-container">
-          <FaGoogle className="google-icon" />
-          <FaTwitter className="google-icon" />
-          <FaInstagram className="google-icon" />
-          <FaYoutube className="google-icon" />
+          <FaGoogle className="popular-google-icon home-google" />
+          <FaTwitter className="popular-google-icon popular-twitter" />
+          <FaInstagram className="popular-google-icon popular-instagram" />
+          <FaYoutube className="popular-google-icon popular-facebook" />
         </div>
-        <p className="contact-heading">Contact</p>
+        <p className="popular-contact-heading">Contact</p>
       </div>
     )
   }

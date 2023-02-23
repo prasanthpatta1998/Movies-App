@@ -45,6 +45,8 @@ class RandomMovie extends Component {
         randomMovie: newList[0],
         movieStatus: movieApiStatus.success,
       })
+    } else {
+      this.setState({movieStatus: movieApiStatus.failure})
     }
   }
 
@@ -83,9 +85,9 @@ class RandomMovie extends Component {
   }
 
   renderFailure = () => (
-    <div className="random-loader-container">
+    <div className="random-failure-container">
       <img
-        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677124723/Path_s36kp9.png"
+        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
         alt="failure"
         className="random-failure-view"
       />

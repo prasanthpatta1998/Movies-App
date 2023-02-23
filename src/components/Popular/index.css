@@ -1,8 +1,8 @@
 .popular-container {
+  position: relative;
   width: 360px;
-  height: 731px;
-  background-color: #131313;
-  background-size: cover;
+  min-height: 731px;
+  background: #131313;
 }
 
 .popular-movie-image {
@@ -18,13 +18,15 @@
 .popular-ul-item {
   list-style-type: none;
   padding-left: 0px;
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 17.1%;
+  bottom: 15.61%;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 32px;
-  margin-right: 32px;
   justify-content: space-between;
-  max-height: 448px;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -44,11 +46,11 @@
   }
 
   .popular-ul-item {
-    margin-top: 32px;
-    margin-left: 165px;
-    margin-right: 165px;
-    margin-bottom: 0px;
-    max-height: 752px;
+    position: absolute;
+    left: 11.46%;
+    right: 11.46%;
+    top: 12.18%;
+    bottom: 15.95%;
     overflow: hidden;
   }
 }

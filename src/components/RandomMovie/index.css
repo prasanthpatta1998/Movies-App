@@ -110,20 +110,27 @@
 }
 
 .random-failure-view {
-  position: absolute;
-  left: 4.17%;
-  right: 4.17%;
-  top: 8.33%;
-  bottom: 12.5%;
+  height: 19xp;
+  width: 22px;
+  margin-left: 138px;
+  margin-top: 61px;
+}
 
-  background: #231f20;
+.random-failure-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 11.5%;
+  bottom: 59%;
+
+  background: #0d0d0d;
+  border-radius: 4px;
 }
 .failure-view {
-  position: absolute;
-  left: 20.28%;
-  right: 20%;
-  top: 24.65%;
-  bottom: 73.13%;
+  margin-top: 15px;
+  margin-left: 41px;
+  height: 16px;
+  width: 215px;
 
   font-family: 'HK Grotesk';
   font-style: normal;
@@ -138,25 +145,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0px;
-
-  position: absolute;
-  left: 39.31%;
-  right: 39.31%;
-  top: 29.09%;
-  bottom: 67.04%;
-
+  border: 0px;
+  margin-left: 109px;
+  margin-top: 110px;
+  height: 28px;
+  margin-top: 15px;
+  width: 77px;
   border-radius: 3px;
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 24px;
-  /* identical to box height, or 200% */
-
-  /* General/Dark blue */
-
   color: #171f46;
+  cursor: pointer;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -171,6 +176,8 @@
     right: 0%;
     top: 0%;
     bottom: 55.38%;
+    height: 605px;
+    width: 1440px;
   }
 
   .random-heading {
@@ -187,7 +194,7 @@
   .random-overview {
     position: absolute;
     left: 11.39%;
-    right: 57.85%;
+    right: 11.39%;
     top: 22.79%;
     bottom: 71.46%;
     font-weight: 500;
@@ -197,6 +204,11 @@
   }
 
   .random-linear-gradient {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 32.67%;
+    bottom: 55.38%;
   }
 
   .random-play-button {
@@ -212,32 +224,43 @@
 
   .random-loader-container {
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 32.67%;
-    bottom: 55.38%;
+    left: 11.53%;
+    right: 11.46%;
+    top: 9.99%;
+    bottom: 55.55%;
+    border-radius: 8px;
   }
 
   .random-loader {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    margin-top: 153px;
-    margin-left: 166px;
-    height: 466px;
-    width: 1109px;
+    margin-top: 212px;
+    margin-left: 534px;
   }
 
   .random-failure-view {
-    margin-top: 211.3px;
-    margin-left: 533.67px;
+    margin-top: 172px;
+    margin-left: 533px;
+    height: 38px;
+    width: 44px;
   }
 
+  .random-failure-container {
+  }
   .failure-view {
+    margin-top: 22px;
+    margin-left: 429px;
+    height: 18px;
+    width: 251px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
   }
-
   .random-failure-button {
+    margin-top: 16px;
+    margin-left: 508px;
+    height: 32px;
+    width: 94px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
   }
 }

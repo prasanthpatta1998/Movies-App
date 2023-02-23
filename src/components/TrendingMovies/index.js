@@ -100,6 +100,10 @@ class TrendingMovies extends Component {
     )
   }
 
+  onRefreshTrendingPage = () => {
+    this.getTrendingMovies()
+  }
+
   renderTrendingLoader = () => (
     <div className="trending-loader-container" testid="loader">
       <Loader
@@ -115,7 +119,7 @@ class TrendingMovies extends Component {
   renderTrendingFailure = () => (
     <div className="trending-loader-container">
       <img
-        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677124723/Path_s36kp9.png"
+        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
         alt="failure"
         className="trending-failure-view"
       />
@@ -125,7 +129,7 @@ class TrendingMovies extends Component {
       <button
         type="button"
         className="trending-failure-button"
-        onClick={this.onRefreshPage}
+        onClick={this.onRefreshTrendingPage}
       >
         Try Again
       </button>
