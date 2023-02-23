@@ -29,6 +29,130 @@
   justify-content: space-between;
 }
 
+.popular-google-icon {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.7143px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.popular-google {
+  position: absolute;
+  left: 34.72%;
+  right: 61.39%;
+  top: 89.14%;
+  bottom: 10.67%;
+}
+
+.popular-twitter {
+  position: absolute;
+  left: 43.61%;
+  right: 52.5%;
+  top: 89.14%;
+  bottom: 10.67%;
+}
+
+.popular-instagram {
+  position: absolute;
+  left: 52.5%;
+  right: 43.61%;
+  top: 89.14%;
+  bottom: 10.67%;
+}
+
+.popular-facebook {
+  position: absolute;
+  left: 61.11%;
+  right: 34.44%;
+  top: 89.14%;
+  bottom: 10.67%;
+}
+.popular-contact-heading {
+  position: absolute;
+  left: 41.94%;
+  right: 41.39%;
+  top: 91.24%;
+  bottom: 6.57%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  color: #ffffff;
+  text-align: center;
+}
+
+.popular-loader {
+  padding-top: 304px;
+  padding-left: 164px;
+  height: 48px;
+  width: 48px;
+}
+.popular-failure-view {
+  position: absolute;
+  left: 17.78%;
+  right: 17.5%;
+  top: 27.81%;
+  bottom: 45.31%;
+  height: 172px;
+  width: 233px;
+}
+
+.popular-failure-view-name {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 55.44%;
+  bottom: 37.81%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.popular-failure-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 35.14%;
+  right: 35.14%;
+  top: 64.94%;
+  bottom: 28.81%;
+
+  border-radius: 3px;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  border: 0px;
+  /* identical to box height, or 171% */
+
+  /* General/Dark blue */
+
+  color: #171f46;
+  cursor: pointer;
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   .popular-container {
     height: 1108px;
@@ -52,5 +176,86 @@
     top: 12.18%;
     bottom: 15.95%;
     overflow: hidden;
+  }
+
+  .popular-google-icon {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .popular-google {
+    left: 45%;
+    right: 53.75%;
+    top: 88.72%;
+    bottom: 9.39%;
+  }
+
+  .popular-twitter {
+    left: 47.92%;
+    right: 50.83%;
+    top: 88.72%;
+    bottom: 9.39%;
+  }
+
+  .popular-instagram {
+    left: 50.83%;
+    right: 48.06%;
+    top: 88.72%;
+    bottom: 9.39%;
+  }
+
+  .popular-facebook {
+    left: 53.61%;
+    right: 44.93%;
+    top: 88.72%;
+    bottom: 9.39%;
+  }
+
+  .popular-contact-heading {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    left: 47.22%;
+    right: 47.22%;
+    top: 92.06%;
+    bottom: 5.78%;
+  }
+
+  .popular-loader {
+    padding-top: 486px;
+    padding-left: 694px;
+    height: 53.33px;
+    width: 53.33px;
+  }
+
+  .popular-failure-view {
+    position: absolute;
+    left: 36.94%;
+    right: 37.01%;
+    top: 29.98%;
+    bottom: 43.07%;
+    height: 276px;
+    width: 375px;
+  }
+
+  .popular-failure-view-name {
+    left: 35.07%;
+    right: 35.07%;
+    top: 57.06%;
+    bottom: 36.91%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .popular-failure-button {
+    height: 48px;
+    left: 46.22%;
+    right: 46.15%;
+    top: calc(50% - 48px / 2 + 182px);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
