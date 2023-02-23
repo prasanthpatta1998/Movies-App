@@ -73,7 +73,7 @@ class MovieDetailsRouter extends Component {
     return (
       <ul className="similar-movies">
         {similarMoviesList.map(eachMovie => {
-          const {id, backdropPath, posterPath, title} = eachMovie
+          const {id, backdropPath, title} = eachMovie
           return (
             <Link to={`/movies/${id}`}>
               <li className="similar-li-item" key={eachMovie.id}>
@@ -97,7 +97,6 @@ class MovieDetailsRouter extends Component {
       backdropPath,
       budget,
       genres,
-      id,
       overview,
       posterPath,
       releaseDate,

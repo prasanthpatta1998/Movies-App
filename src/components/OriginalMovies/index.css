@@ -1,36 +1,88 @@
-.original-slider {
-  padding-left: 32px;
-  padding-right: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 24px;
-}
-
 .original-now-heading {
-  height: 21px;
-  width: 99px;
+  position: absolute;
+  left: 8.89%;
+  right: 73.06%;
+  top: 67.39%;
+  bottom: 29.92%;
+
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  /* identical to box height */
+
+  /* General/White */
+
   color: #ffffff;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: #131313;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.original-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 32px;
+}
+
+.original-slick-container {
+  max-width: 360px;
+  margin-top: 10px;
+  margin-top: 12px;
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 71.61%;
+  bottom: 20.2%;
+}
+
+.original-logo-image {
+  margin: 0px 10px;
+  height: 64px;
+  width: 90px;
+  border-radius: 8px;
+}
 @media screen and (min-width: 768px) {
   .original-slider {
     margin-top: 0px;
   }
+
   .original-now-heading {
-    margin-left: 125px;
-    height: 31px;
-    width: 148px;
+    position: absolute;
+    left: 11.46%;
+    right: 81.81%;
+    top: 67.11%;
+    bottom: 30.6%;
     font-weight: 600;
     font-size: 24px;
     line-height: 31px;
-    margin-top: 32px;
+  }
+  .original-logo-image {
+    height: 170px;
+    width: 250px;
+  }
+
+  .original-slick-container {
+    position: absolute;
+    left: 11.46%;
+    right: 11.46%;
+    top: 71.17%;
+    bottom: 16.3%;
+    max-width: 1000%;
+    margin-top: 24px;
   }
 }

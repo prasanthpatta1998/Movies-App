@@ -2,31 +2,23 @@ import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Header from '../Header'
 import TrendingMovies from '../TrendingMovies'
 import OriginalMovies from '../OriginalMovies'
+import RandomMovie from '../RandomMovie'
 import './index.css'
 
 const Home = () => (
   <div className="home-container">
-    <div className="home-background-container">
-      <Header boolValue="false" />
-      <h1 className="home-heading">Super Man</h1>
-      <p className="home-description">
-        Superman is a fictional superhero who first appeared in American comic
-        books published by DC Comics.
-      </p>
-      <button type="button" className="home-button">
-        Play
-      </button>
-      <TrendingMovies />
-      <OriginalMovies />
+    <Header boolValue="false" />
+    <RandomMovie />
+    <TrendingMovies />
+    <OriginalMovies />
 
-      <div className="contact-icons-container">
-        <FaGoogle className="google-icon" />
-        <FaTwitter className="google-icon" />
-        <FaInstagram className="google-icon" />
-        <FaYoutube className="google-icon" />
-      </div>
-      <p className="contact-heading">Contact</p>
+    <div className="contact-icons-container">
+      <FaGoogle className="home-google-icon home-google" />
+      <FaTwitter className="home-google-icon home-twitter" />
+      <FaInstagram className="home-google-icon home-instagram" />
+      <FaYoutube className="home-google-icon home-facebook" />
     </div>
+    <p className="home-contact-heading">Contact</p>
   </div>
 )
 

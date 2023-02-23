@@ -2,35 +2,14 @@
   background-color: #131313;
   min-height: 782px;
   width: 360px;
+  position: absolute;
+  top: 0%;
 }
 
 @media screen and (min-width: 768px) {
   .home-container {
     width: 1440px;
     min-height: 1356px;
-  }
-}
-
-.home-background-container {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 45.4%;
-  background-image: url('https://res.cloudinary.com/duezhxznc/image/upload/v1676787339/wp2581913-man-of-steel-wallpaper_1_thfcg5.png');
-  height: 427px;
-}
-
-@media screen and (min-width: 768px) {
-  .home-background-container {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 55.38%;
-    background-image: url('https://res.cloudinary.com/duezhxznc/image/upload/v1676874038/Image_fgdtzl.png');
-    height: 605px;
-    width: 1440px;
   }
 }
 
@@ -145,49 +124,127 @@
   }
 }
 
-.contact-container {
-}
-.contact-icons-container {
-  height: 16px;
-  width: 111px;
-  margin-top: 64px;
-  margin-left: 125px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.google-icon {
-  height: 16px;
-  width: 14px;
+.home-google-icon {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
   font-size: 13.7143px;
   line-height: 16px;
   text-align: center;
+
   color: #ffffff;
+
+  /* identical to box height */
+}
+
+.home-google {
+  position: absolute;
+  left: 34.72%;
+  right: 61.39%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.home-twitter {
+  position: absolute;
+  left: 43.61%;
+  right: 52.5%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.home-instagram {
+  position: absolute;
+  left: 52.5%;
+  right: 43.61%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.home-facebook {
+  position: absolute;
+  left: 61.11%;
+  right: 34.44%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.home-contact-heading {
+  position: absolute;
+  left: 41.94%;
+  right: 41.39%;
+  top: 93.54%;
+  bottom: 4.85%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  color: #ffffff;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .contact-icons-container {
-    margin-top: 94px;
-    margin-left: 648px;
-    height: 21px;
-    width: 145px;
-  }
-
-  .google-icon {
-    width: 18px;
-    height: 21px;
-  }
-
-  .contact-heading {
+  .home-contact-heading {
+    margin-top: 1263px;
     margin-left: 680px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
     height: 24px;
     width: 80px;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+  }
+  .home-twitter {
+    margin-top: 1226px;
+    margin-left: 689px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .home-instagram {
+    margin-top: 1226px;
+    margin-left: 731px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .home-facebook {
+    margin-top: 1226px;
+    margin-left: 771px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .home-google-icon {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .home-google {
+    margin-top: 1226px;
+    margin-left: 647px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
   }
 }

@@ -1,14 +1,20 @@
 .trending-now-heading {
-  height: 21px;
-  width: 99px;
+  position: absolute;
+  left: 8.89%;
+  right: 63.61%;
+  top: 51.92%;
+  bottom: 45.4%;
+
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  /* identical to box height */
+
+  /* General/White */
+
   color: #ffffff;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .slick-prev:before,
@@ -37,6 +43,11 @@
   max-width: 360px;
   margin-top: 10px;
   margin-top: 12px;
+  position: absolute;
+  left: 8.99%;
+  right: 8.99%;
+  top: 56.14%;
+  bottom: 35.68%;
 }
 
 .logo-image {
@@ -51,10 +62,11 @@
   }
 
   .trending-now-heading {
-    margin-left: 125px;
-    margin-top: 194px;
-    height: 31px;
-    width: 148px;
+    position: absolute;
+    left: 11.46%;
+    right: 78.26%;
+    top: 48.16%;
+    bottom: 49.56%;
     font-weight: 600;
     font-size: 24px;
     line-height: 31px;
@@ -65,9 +77,40 @@
   }
 
   .slick-container {
+    position: absolute;
+    left: 11.53%;
+    right: 11.53%;
+    top: 52.21%;
+    bottom: 35.25%;
     max-width: 1000%;
-    margin-left: 102px;
-    margin-right: 102px;
     margin-top: 24px;
   }
+}
+
+.trending-loader-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 47.19%;
+  bottom: 40.78%;
+
+  background: #0d0d0d;
+  border-radius: 4px;
+}
+
+.trending-loader {
+  margin-top: 35px;
+  margin-left: 138px;
+}
+
+.trending-failure-view {
+}
+
+.trending-failure-view {
+}
+
+.trending-failure-view-name {
+}
+
+.trending-failure-button {
 }

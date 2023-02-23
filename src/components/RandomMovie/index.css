@@ -1,0 +1,243 @@
+.random-image {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  height: 427px;
+  width: 360px;
+  top: 0%;
+}
+
+.random-image-backdrop {
+  display: none;
+}
+
+.random-heading {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 25.58%;
+  bottom: 68.41%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
+  /* identical to box height */
+
+  /* General/White */
+
+  color: #ffffff;
+  z-index: 1;
+}
+
+.random-overview {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 32.61%;
+  bottom: 59.34%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  overflow: auto;
+  z-index: 1;
+}
+
+.random-linear-gradient {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 36.45%;
+  bottom: 42.84%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(24, 24, 24, 0.546875) 38.26%,
+    #131313 92.82%,
+    #131313 98.68%,
+    #131313 108.61%
+  );
+  z-index: 0;
+}
+
+.random-play-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 9.03%;
+  right: 69.86%;
+  top: 43.73%;
+  bottom: 52.17%;
+
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 8px 24px;
+  gap: 8px;
+  letter-spacing: 0.05em;
+
+  /* General/Dark blue */
+
+  color: #171f46;
+  border: 0px;
+  z-index: 1;
+}
+
+.random-loader-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 11.1%;
+  bottom: 60.43%;
+
+  background: #0d0d0d;
+  border-radius: 4px;
+}
+
+.random-loader {
+  margin-top: 91px;
+  margin-left: 132px;
+}
+
+.random-failure-view {
+  position: absolute;
+  left: 4.17%;
+  right: 4.17%;
+  top: 8.33%;
+  bottom: 12.5%;
+
+  background: #231f20;
+}
+.failure-view {
+  position: absolute;
+  left: 20.28%;
+  right: 20%;
+  top: 24.65%;
+  bottom: 73.13%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.random-failure-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 39.31%;
+  right: 39.31%;
+  top: 29.09%;
+  bottom: 67.04%;
+
+  border-radius: 3px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  /* identical to box height, or 200% */
+
+  /* General/Dark blue */
+
+  color: #171f46;
+}
+
+@media screen and (min-width: 768px) {
+  .random-image {
+    display: none;
+  }
+
+  .random-image-backdrop {
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 55.38%;
+  }
+
+  .random-heading {
+    position: absolute;
+    left: 11.39%;
+    right: 11.39%;
+    top: 16.45%;
+    bottom: 78.98%;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 62px;
+  }
+
+  .random-overview {
+    position: absolute;
+    left: 11.39%;
+    right: 57.85%;
+    top: 22.79%;
+    bottom: 71.46%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    overflow: visible;
+  }
+
+  .random-linear-gradient {
+  }
+
+  .random-play-button {
+    position: absolute;
+    left: 11.42%;
+    right: 83.44%;
+    top: 30.9%;
+    bottom: 66.15%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .random-loader-container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 32.67%;
+    bottom: 55.38%;
+  }
+
+  .random-loader {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin-top: 153px;
+    margin-left: 166px;
+    height: 466px;
+    width: 1109px;
+  }
+
+  .random-failure-view {
+    margin-top: 211.3px;
+    margin-left: 533.67px;
+  }
+
+  .failure-view {
+  }
+
+  .random-failure-button {
+  }
+}

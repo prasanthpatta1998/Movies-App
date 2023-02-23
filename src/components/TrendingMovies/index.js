@@ -1,8 +1,16 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
 import './index.css'
+
+const movieApiTrendingStatus = {
+  initial: 'INITIAL',
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+  inProgress: 'IN_PROGRESS',
+}
 
 const settings = {
   dots: false,
@@ -38,6 +46,7 @@ const settings = {
 class TrendingMovies extends Component {
   state = {
     trendingList: [],
+    movieTrendingStatus: movieApiTrendingStatus.initial,
   }
 
   componentDidMount() {
@@ -45,6 +54,7 @@ class TrendingMovies extends Component {
   }
 
   getTrendingMovies = async () => {
+    this.setState({movieTrendingStatus: movieApiTrendingStatus.inProgress})
     const url = 'https://apis.ccbp.in/movies-app/trending-movies'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
@@ -63,7 +73,12 @@ class TrendingMovies extends Component {
         posterPath: eachMovie.poster_path,
         title: eachMovie.title,
       }))
-      this.setState({trendingList: newList})
+      this.setState({
+        trendingList: newList,
+        movieTrendingStatus: movieApiTrendingStatus.success,
+      })
+    } else {
+      this.setState({movieTrendingStatus: movieApiTrendingStatus.failure})
     }
   }
 
@@ -85,13 +100,62 @@ class TrendingMovies extends Component {
     )
   }
 
+  renderTrendingLoader = () => (
+    <div className="trending-loader-container" testid="loader">
+      <Loader
+        type="TailSpin"
+        color="#D81F26"
+        height={50}
+        width={50}
+        className="trending-loader"
+      />
+    </div>
+  )
+
+  renderTrendingFailure = () => (
+    <div className="trending-loader-container">
+      <img
+        src="https://res.cloudinary.com/duezhxznc/image/upload/v1677124723/Path_s36kp9.png"
+        alt="failure"
+        className="trending-failure-view"
+      />
+      <p className="trending-failure-view-name">
+        Something went wrong. Please try again
+      </p>
+      <button
+        type="button"
+        className="trending-failure-button"
+        onClick={this.onRefreshPage}
+      >
+        Try Again
+      </button>
+    </div>
+  )
+
+  renderTrendingSuccess = () => (
+    <div className="main-container">
+      <h1 className="trending-now-heading">Trending Now</h1>
+      <div className="slick-container">{this.renderSlider()}</div>
+    </div>
+  )
+
+  getTrendingMovieList = () => {
+    const {movieTrendingStatus} = this.state
+
+    switch (movieTrendingStatus) {
+      case movieApiTrendingStatus.inProgress:
+        return this.renderTrendingLoader()
+      case movieApiTrendingStatus.success:
+        return this.renderTrendingSuccess()
+      case movieApiTrendingStatus.failure:
+        return this.renderTrendingFailure()
+      default:
+        return null
+    }
+  }
+
   render() {
-    return (
-      <div className="main-container">
-        <h1 className="trending-now-heading">Trending Now</h1>
-        <div className="slick-container">{this.renderSlider()}</div>
-      </div>
-    )
+    return this.getTrendingMovieList()
   }
 }
 export default TrendingMovies
