@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import './index.css'
@@ -17,6 +18,8 @@ class SearchMovieRouter extends Component {
     searchInput: '',
     searchResults: [],
     searchState: movieApiSearchStatus.initial,
+    page: 1,
+    searchPaginationList: [],
   }
 
   showSearchResults = async () => {
@@ -32,6 +35,7 @@ class SearchMovieRouter extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(data)
     if (response.ok === true) {
       const newList = data.results.map(eachMovie => ({
         id: eachMovie.id,
@@ -61,6 +65,38 @@ class SearchMovieRouter extends Component {
     }
   }
 
+  searchBackwardButton = () => {
+    const {page, searchResults} = this.state
+    if (page === 1) {
+      this.setState({page: 1})
+    } else {
+      const lastIndex = (page - 1) * 16
+      const firstIndex = lastIndex - 16
+      const pageList = searchResults.slice(firstIndex, lastIndex)
+      this.setState(prevState => ({
+        page: prevState.page - 1,
+        searchPaginationList: pageList,
+      }))
+    }
+  }
+
+  searchForwardButton = () => {
+    const {page, searchResults} = this.state
+
+    const totalPages = Math.ceil(searchResults.length / 16)
+    if (page === totalPages) {
+      this.setState({page: totalPages})
+    } else {
+      const lastIndex = (page + 1) * 16
+      const firstIndex = lastIndex - 16
+      const pageList = searchResults.slice(firstIndex, lastIndex)
+      this.setState(prevState => ({
+        page: prevState.page + 1,
+        searchPaginationList: pageList,
+      }))
+    }
+  }
+
   onRefreshSearchPage = () => {
     this.showSearchResults()
   }
@@ -78,7 +114,8 @@ class SearchMovieRouter extends Component {
   )
 
   renderSearchSuccess = () => {
-    const {searchResults, searchInput} = this.state
+    const {searchResults, searchInput, page, searchPaginationList} = this.state
+    const totalPages = Math.ceil(searchResults.length / 16)
     if (searchInput === '') {
       return null
     }
@@ -97,18 +134,41 @@ class SearchMovieRouter extends Component {
       )
     }
     return (
-      <ul className="search-ul-item">
-        {searchResults.map(eachMovie => {
-          const {id, backdropPath, title} = eachMovie
-          return (
-            <Link to={`/movies/${id}`}>
-              <li className="search-movie-image" key={id}>
-                <img src={backdropPath} alt={title} className="search-image" />
-              </li>
-            </Link>
-          )
-        })}
-      </ul>
+      <>
+        <ul className="search-ul-item">
+          {searchPaginationList.map(eachMovie => {
+            const {id, backdropPath, title} = eachMovie
+            return (
+              <Link to={`/movies/${id}`}>
+                <li className="search-movie-image" key={id}>
+                  <img
+                    src={backdropPath}
+                    alt={title}
+                    className="search-image"
+                  />
+                </li>
+              </Link>
+            )
+          })}
+        </ul>
+        <div className="search-pagination-buttons">
+          <button
+            type="button"
+            className="search-backward-button"
+            onClick={this.searchBackwardButton}
+          >
+            <IoIosArrowBack className="search-backward" />
+          </button>
+          <p className="search-page-numbers">{`${page} of ${totalPages}`}</p>
+          <button
+            type="button"
+            className="search-forward-button"
+            onClick={this.searchForwardButton}
+          >
+            <IoIosArrowForward className="search-forward" />
+          </button>
+        </div>
+      </>
     )
   }
 

@@ -2,6 +2,7 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
+import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import './index.css'
@@ -17,6 +18,8 @@ class Popular extends Component {
   state = {
     popularMovies: [],
     popularMovieStatus: movieApiPopularStatus.initial,
+    page: 1,
+    paginationList: [],
   }
 
   componentDidMount() {
@@ -35,6 +38,7 @@ class Popular extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(data)
     if (response.ok === true) {
       const newList = data.results.map(eachMovie => ({
         id: eachMovie.id,
@@ -45,6 +49,7 @@ class Popular extends Component {
       }))
       this.setState({
         popularMovies: newList,
+        paginationList: newList.slice(0, 16),
         popularMovieStatus: movieApiPopularStatus.success,
       })
     } else {
@@ -64,13 +69,46 @@ class Popular extends Component {
     </div>
   )
 
+  backwardButton = () => {
+    const {page, popularMovies} = this.state
+    if (page === 1) {
+      this.setState({page: 1})
+    } else {
+      const lastIndex = (page - 1) * 16
+      const firstIndex = lastIndex - 16
+      const pageList = popularMovies.slice(firstIndex, lastIndex)
+      this.setState(prevState => ({
+        page: prevState.page - 1,
+        paginationList: pageList,
+      }))
+    }
+  }
+
+  forwardButton = () => {
+    const {page, popularMovies} = this.state
+
+    const totalPages = Math.ceil(popularMovies.length / 16)
+    if (page === totalPages) {
+      this.setState({page: totalPages})
+    } else {
+      const lastIndex = (page + 1) * 16
+      const firstIndex = lastIndex - 16
+      const pageList = popularMovies.slice(firstIndex, lastIndex)
+      this.setState(prevState => ({
+        page: prevState.page + 1,
+        paginationList: pageList,
+      }))
+    }
+  }
+
   renderPopularSuccess = () => {
-    const {popularMovies} = this.state
+    const {paginationList, popularMovies, page} = this.state
+    const totalPages = Math.ceil(popularMovies.length / 16)
 
     return (
       <>
         <ul className="popular-ul-item">
-          {popularMovies.map(eachMovie => {
+          {paginationList.map(eachMovie => {
             const {id, backdropPath, title} = eachMovie
             return (
               <Link to={`/movies/${id}`}>
@@ -85,6 +123,23 @@ class Popular extends Component {
             )
           })}
         </ul>
+        <div className="pagination-buttons">
+          <button
+            type="button"
+            className="backward-button"
+            onClick={this.backwardButton}
+          >
+            <IoIosArrowBack className="backward" />
+          </button>
+          <p className="page-numbers">{`${page} of ${totalPages}`}</p>
+          <button
+            type="button"
+            className="forward-button"
+            onClick={this.forwardButton}
+          >
+            <IoIosArrowForward className="forward" />
+          </button>
+        </div>
         <div className="contact-icons-container">
           <FaGoogle className="popular-google-icon popular-google" />
           <FaTwitter className="popular-google-icon popular-twitter" />

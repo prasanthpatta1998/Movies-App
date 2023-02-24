@@ -7,17 +7,16 @@
 .search-ul-item {
   position: absolute;
   left: 8.89%;
-  right: 8.89%;
+  right: 4.89%;
   top: 15.47%;
-  bottom: 14.53%;
 
   border-radius: 8px;
   list-style-type: none;
   padding-left: 0px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   overflow: hidden;
+  max-height: 460px;
 }
 
 .search-image {
@@ -28,6 +27,7 @@
 
 .search-movie-image {
   margin-bottom: 16px;
+  margin-right: 13px;
 }
 
 .search-loader-container {
@@ -109,7 +109,6 @@
   text-align: center;
 
   color: #ffffff;
-  height: ;
 }
 
 .search-invalid-view {
@@ -133,7 +132,7 @@
     bottom: 0%;
     margin-top: 135px;
     margin-left: 165px;
-    height: 765px;
+    max-height: 764px;
     width: 1110px;
   }
 
@@ -207,5 +206,86 @@
     height: 31px;
     width: 1440px;
     text-align: center;
+  }
+}
+
+.search-pagination-buttons {
+  position: absolute;
+  left: 33.89%;
+  right: 33.61%;
+  top: 93.25%;
+  bottom: 3%;
+  display: flex;
+  height: 24px;
+  width: 117px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-backward-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  background: #131313;
+  border: 1px solid #d7dfe9;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.search-backward {
+  color: #ffffff;
+}
+.search-forward-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  background: #131313;
+  border: 1px solid #d7dfe9;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-page-numbers {
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #cbd5e1;
+}
+
+.search-forward {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .search-pagination-buttons {
+    left: 44.72%;
+    right: 44.65%;
+    top: 79.44%;
+    bottom: 19.92%;
+    height: 32px;
+    width: 153px;
+  }
+  .search-forward-button {
+    height: 32px;
+    width: 32px;
+  }
+  .search-backward-button {
+    height: 32px;
+    width: 32px;
+  }
+  .search-page-numbers {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
   }
 }

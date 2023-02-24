@@ -97,7 +97,7 @@ class OriginalMovies extends Component {
       }))
       this.setState({
         originalList: newList,
-        movieOriginalStatus: movieApiOriginalStatus.inProgress,
+        movieOriginalStatus: movieApiOriginalStatus.success,
       })
     } else {
       this.setState({movieOriginalStatus: movieApiOriginalStatus.failure})

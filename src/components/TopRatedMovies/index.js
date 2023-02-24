@@ -97,7 +97,7 @@ class TopRatedMovies extends Component {
       }))
       this.setState({
         originalList: newList,
-        movieTopRatedStatus: movieApiTopRatedStatus.inProgress,
+        movieTopRatedStatus: movieApiTopRatedStatus.success,
       })
     } else {
       this.setState({movieTopRatedStatus: movieApiTopRatedStatus.failure})
