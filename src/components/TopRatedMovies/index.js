@@ -6,7 +6,7 @@ import Slider from 'react-slick'
 import Cookies from 'js-cookie'
 import './index.css'
 
-const movieApiOriginalStatus = {
+const movieApiTopRatedStatus = {
   initial: 'INITIAL',
   success: 'SUCCESS',
   failure: 'FAILURE',
@@ -65,10 +65,10 @@ const settings = {
   ],
 }
 
-class OriginalMovies extends Component {
+class TopRatedMovies extends Component {
   state = {
     originalList: [],
-    movieOriginalStatus: movieApiOriginalStatus.initial,
+    movieTopRatedStatus: movieApiTopRatedStatus.initial,
   }
 
   componentDidMount() {
@@ -76,8 +76,8 @@ class OriginalMovies extends Component {
   }
 
   getOriginalMovies = async () => {
-    this.setState({movieOriginalStatus: movieApiOriginalStatus.inProgress})
-    const url = 'https://apis.ccbp.in/movies-app/originals'
+    this.setState({movieTopRatedStatus: movieApiTopRatedStatus.inProgress})
+    const url = 'https://apis.ccbp.in/movies-app/top-rated-movies'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       headers: {
@@ -97,10 +97,10 @@ class OriginalMovies extends Component {
       }))
       this.setState({
         originalList: newList,
-        movieOriginalStatus: movieApiOriginalStatus.inProgress,
+        movieTopRatedStatus: movieApiTopRatedStatus.inProgress,
       })
     } else {
-      this.setState({movieOriginalStatus: movieApiOriginalStatus.failure})
+      this.setState({movieTopRatedStatus: movieApiTopRatedStatus.failure})
     }
   }
 
@@ -130,27 +130,27 @@ class OriginalMovies extends Component {
     this.getOriginalMovies()
   }
 
-  renderOriginalLoader = () => (
-    <div className="Original-loader-container" testid="loader">
+  renderTopRatedLoader = () => (
+    <div className="top-rated-loader-container" testid="loader">
       <Loader
         type="TailSpin"
         color="#D81F26"
         height={50}
         width={50}
-        className="Original-loader"
+        className="top-rated-loader"
       />
     </div>
   )
 
-  renderOriginalSuccess = () => (
-    <div className="original-slider">
-      <h1 className="original-now-heading">Originals</h1>
-      <div className="original-slick-container">{this.renderSlider()}</div>
+  renderTopRatedSuccess = () => (
+    <div className="top-rated-slider">
+      <h1 className="top-rated-now-heading">Popular</h1>
+      <div className="top-rated-slick-container">{this.renderSlider()}</div>
     </div>
   )
 
-  renderOriginalFailure = () => (
-    <div className="Original-loader-container">
+  renderTopRatedFailure = () => (
+    <div className="top-rated-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
         alt="failure"
@@ -169,24 +169,24 @@ class OriginalMovies extends Component {
     </div>
   )
 
-  renderOriginal = () => {
-    const {movieOriginalStatus} = this.state
+  renderTopMovies = () => {
+    const {movieTopRatedStatus} = this.state
 
-    switch (movieOriginalStatus) {
-      case movieApiOriginalStatus.inProgress:
-        return this.renderOriginalLoader()
-      case movieApiOriginalStatus.success:
-        return this.renderOriginalSuccess()
-      case movieApiOriginalStatus.failure:
-        return this.renderOriginalFailure()
+    switch (movieTopRatedStatus) {
+      case movieApiTopRatedStatus.inProgress:
+        return this.renderTopRatedLoader()
+      case movieApiTopRatedStatus.success:
+        return this.renderTopRatedSuccess()
+      case movieApiTopRatedStatus.failure:
+        return this.renderTopRatedFailure()
       default:
         return null
     }
   }
 
   render() {
-    return this.renderOriginal()
+    return this.renderTopMovies()
   }
 }
 
-export default OriginalMovies
+export default TopRatedMovies

@@ -98,7 +98,7 @@ class TrendingMovies extends Component {
       }))
       this.setState({
         trendingList: newList,
-        movieTrendingStatus: movieApiTrendingStatus.success,
+        movieTrendingStatus: movieApiTrendingStatus.inProgress,
       })
     } else {
       this.setState({movieTrendingStatus: movieApiTrendingStatus.failure})

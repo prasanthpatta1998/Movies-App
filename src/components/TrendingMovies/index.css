@@ -1,9 +1,9 @@
 .trending-now-heading {
   position: absolute;
   left: 8.89%;
-  right: 63.61%;
-  top: 51.92%;
-  bottom: 45.4%;
+  right: 56.67%;
+  top: 44.76%;
+  bottom: 52.43%;
 
   font-family: 'HK Grotesk';
   font-style: normal;
@@ -44,10 +44,10 @@
   margin-top: 10px;
   margin-top: 12px;
   position: absolute;
-  left: 8.99%;
-  right: 8.99%;
-  top: 56.14%;
-  bottom: 35.68%;
+  left: 8.89%;
+  right: 8.89%;
+  top: 48.43%;
+  bottom: 44.65%;
 }
 
 .arrow {
@@ -82,9 +82,9 @@
   .trending-now-heading {
     position: absolute;
     left: 11.46%;
-    right: 78.26%;
-    top: 48.16%;
-    bottom: 49.56%;
+    right: 74.86%;
+    top: 37.76%;
+    bottom: 59.75%;
     font-weight: 600;
     font-size: 24px;
     line-height: 31px;
@@ -98,8 +98,8 @@
     position: absolute;
     left: 11.53%;
     right: 11.53%;
-    top: 52.21%;
-    bottom: 35.25%;
+    top: 41.61%;
+    bottom: 48.31%;
     max-width: 1000%;
     margin-top: 24px;
   }
@@ -109,27 +109,26 @@
   position: absolute;
   left: 8.89%;
   right: 8.89%;
-  top: 47.19%;
-  bottom: 40.78%;
-
+  top: 45.19%;
+  bottom: 41.78%;
   background: #0d0d0d;
   border-radius: 4px;
 }
 
 .trending-loader {
   margin-top: 35px;
-  margin-left: 138px;
+  margin-left: 130px;
 }
 
 .trending-failure-view {
-  margin-top: 12px;
+  margin-top: 18px;
   margin-left: 142px;
   height: 13px;
   width: 15px;
 }
 
 .trending-failure-view-name {
-  height: 13px;
+  height: 15px;
   width: 179px;
   margin-top: 6px;
   margin-left: 59px;
@@ -142,7 +141,7 @@
 }
 
 .trending-failure-button {
-  margin-top: 12px;
+  margin-top: 16px;
   margin-left: 114px;
   height: 24px;
   width: 69px;
@@ -168,9 +167,8 @@
     position: absolute;
     left: 11.53%;
     right: 11.46%;
-    top: 52.07%;
-    bottom: 35.36%;
-
+    top: 37.07%;
+    bottom: 51.36%;
     background: #0d0d0d;
     border-radius: 8px;
   }

@@ -14,29 +14,27 @@
 .random-heading {
   position: absolute;
   left: 8.89%;
-  right: 8.89%;
-  top: 25.58%;
-  bottom: 68.41%;
+  right: 26.39%;
+  top: 19.78%;
+  bottom: 74.16%;
 
-  font-family: 'HK Grotesk';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 47px;
-  /* identical to box height */
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
 
   /* General/White */
 
   color: #ffffff;
-  z-index: 1;
 }
 
 .random-overview {
   position: absolute;
   left: 8.89%;
   right: 8.89%;
-  top: 32.61%;
-  bottom: 59.34%;
+  top: 27.57%;
+  bottom: 65.62%;
 
   font-family: 'HK Grotesk';
   font-style: normal;
@@ -46,7 +44,16 @@
 
   color: #ffffff;
   overflow: auto;
+  height: 63px;
   z-index: 1;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  color: transparent;
 }
 
 .random-linear-gradient {
@@ -75,10 +82,10 @@
   padding: 0px;
 
   position: absolute;
-  left: 9.03%;
-  right: 69.86%;
-  top: 43.73%;
-  bottom: 52.17%;
+  left: 8.89%;
+  right: 70.56%;
+  top: 36.97%;
+  bottom: 58.7%;
 
   border-radius: 3px;
   background-color: #ffffff;
@@ -106,7 +113,7 @@
 
 .random-loader {
   margin-top: 91px;
-  margin-left: 132px;
+  margin-left: 130px;
 }
 
 .random-failure-view {
@@ -114,6 +121,7 @@
   width: 22px;
   margin-left: 138px;
   margin-top: 61px;
+  margin-top: 78px;
 }
 
 .random-failure-container {
@@ -140,6 +148,7 @@
   /* identical to box height */
 
   color: #ffffff;
+  text-align: center;
 }
 .random-failure-button {
   display: flex;
@@ -184,8 +193,8 @@
     position: absolute;
     left: 11.39%;
     right: 11.39%;
-    top: 16.45%;
-    bottom: 78.98%;
+    top: 11.8%;
+    bottom: 84.53%;
     font-weight: 600;
     font-size: 64px;
     line-height: 62px;
@@ -195,28 +204,28 @@
     position: absolute;
     left: 11.39%;
     right: 11.39%;
-    top: 22.79%;
-    bottom: 71.46%;
+    top: 16.89%;
+    bottom: 78.48%;
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    overflow: visible;
+    height: 78px;
   }
 
   .random-linear-gradient {
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 32.67%;
-    bottom: 55.38%;
+    top: 26.26%;
+    bottom: 64.14%;
   }
 
   .random-play-button {
     position: absolute;
-    left: 11.42%;
-    right: 83.44%;
-    top: 30.9%;
-    bottom: 66.15%;
+    left: 11.46%;
+    right: 83.19%;
+    top: 23.41%;
+    bottom: 73.74%;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -226,8 +235,8 @@
     position: absolute;
     left: 11.53%;
     right: 11.46%;
-    top: 9.99%;
-    bottom: 55.55%;
+    top: 6.99%;
+    bottom: 65.55%;
     border-radius: 8px;
   }
 
@@ -244,6 +253,12 @@
   }
 
   .random-failure-container {
+    position: absolute;
+    left: 11.53%;
+    right: 11.46%;
+    top: 6.99%;
+    bottom: 65.55%;
+    border-radius: 8px;
   }
   .failure-view {
     margin-top: 22px;

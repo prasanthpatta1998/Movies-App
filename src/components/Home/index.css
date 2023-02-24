@@ -1,6 +1,6 @@
 .home-container {
   background-color: #131313;
-  min-height: 782px;
+  min-height: 925px;
   width: 360px;
   position: absolute;
   top: 0%;
@@ -9,7 +9,7 @@
 @media screen and (min-width: 768px) {
   .home-container {
     width: 1440px;
-    min-height: 1356px;
+    min-height: 1687px;
   }
 }
 
@@ -189,48 +189,36 @@
 
 @media screen and (min-width: 768px) {
   .home-contact-heading {
-    margin-top: 1263px;
-    margin-left: 680px;
-    top: 0%;
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    height: 24px;
-    width: 80px;
+    position: absolute;
+    left: 47.22%;
+    right: 47.22%;
+    top: 92.65%;
+    bottom: 5.69%;
     font-weight: 600;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 28px;
     text-align: center;
   }
   .home-twitter {
-    margin-top: 1226px;
-    margin-left: 689px;
-    top: 0%;
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    height: 21px;
-    width: 18px;
+    position: absolute;
+    left: 47.85%;
+    right: 50.9%;
+    top: 90.46%;
+    bottom: 8.3%;
   }
   .home-instagram {
-    margin-top: 1226px;
-    margin-left: 731px;
-    top: 0%;
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    height: 21px;
-    width: 18px;
+    position: absolute;
+    left: 50.76%;
+    right: 48.12%;
+    top: 90.46%;
+    bottom: 8.3%;
   }
   .home-facebook {
-    margin-top: 1226px;
-    margin-left: 771px;
-    top: 0%;
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    height: 21px;
-    width: 18px;
+    position: absolute;
+    left: 53.54%;
+    right: 45%;
+    top: 90.46%;
+    bottom: 8.3%;
   }
   .home-google-icon {
     font-size: 18px;
@@ -238,13 +226,9 @@
   }
 
   .home-google {
-    margin-top: 1226px;
-    margin-left: 647px;
-    top: 0%;
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    height: 21px;
-    width: 18px;
+    left: 44.93%;
+    right: 53.82%;
+    top: 90.46%;
+    bottom: 8.3%;
   }
 }

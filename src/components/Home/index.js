@@ -2,6 +2,7 @@ import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Header from '../Header'
 import TrendingMovies from '../TrendingMovies'
 import OriginalMovies from '../OriginalMovies'
+import TopRatedMovies from '../TopRatedMovies'
 import RandomMovie from '../RandomMovie'
 import './index.css'
 
@@ -10,6 +11,7 @@ const Home = () => (
     <Header boolValue="false" />
     <RandomMovie />
     <TrendingMovies />
+    <TopRatedMovies />
     <OriginalMovies />
 
     <div className="contact-icons-container">

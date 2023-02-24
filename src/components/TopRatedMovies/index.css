@@ -1,9 +1,9 @@
-.original-now-heading {
+.top-rated-now-heading {
   position: absolute;
   left: 8.89%;
-  right: 68.61%;
-  top: 71.14%;
-  bottom: 26.05%;
+  right: 71.67%;
+  top: 57.95%;
+  bottom: 39.24%;
 
   font-family: 'HK Grotesk';
   font-style: normal;
@@ -30,7 +30,7 @@
   font-weight: 200;
 }
 
-.original-slider {
+.top-rated-slider {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,81 +39,81 @@
   margin-top: 32px;
 }
 
-.original-slick-container {
+.top-rated-slick-container {
   max-width: 360px;
   margin-top: 10px;
   margin-top: 12px;
   position: absolute;
   left: 8.89%;
   right: 8.89%;
-  top: 76.97%;
-  bottom: 20.43%;
+  top: 61.62%;
+  bottom: 31.46%;
 }
 
-.original-logo-image {
+.top-rated-logo-image {
   margin: 0px 10px;
   height: 64px;
   width: 90px;
   border-radius: 8px;
 }
+
 @media screen and (min-width: 768px) {
-  .original-slider {
+  .top-rated-slider {
     margin-top: 0px;
   }
 
-  .original-now-heading {
+  .top-rated-now-heading {
     position: absolute;
     left: 11.46%;
     right: 11.46%;
-    top: 69.41%;
-    bottom: 28.1%;
+    top: 53.59%;
+    bottom: 43.92%;
     font-weight: 600;
     font-size: 24px;
     line-height: 31px;
   }
-  .original-logo-image {
+  .top-rated-logo-image {
     height: 170px;
     width: 250px;
   }
 
-  .original-slick-container {
+  .top-rated-slick-container {
     position: absolute;
-    left: 11.46%;
-    right: 11.46%;
-    top: 73.27%;
-    bottom: 16.66%;
+    left: 11.67%;
+    right: 11.67%;
+    top: 57.44%;
+    bottom: 32.48%;
     max-width: 1000%;
     margin-top: 24px;
   }
 }
 
-.Original-loader-container {
+.top-rated-loader-container {
   position: absolute;
   left: 8.89%;
   right: 8.89%;
-  top: 75.84%;
-  bottom: 11.12%;
+  top: 60.19%;
+  bottom: 26.78%;
   background: #0d0d0d;
   border-radius: 4px;
 }
 
-.Original-loader {
+.top-rated-loader {
   margin-top: 35px;
   margin-left: 130px;
 }
 
 @media screen and (min-width: 768px) {
-  .Original-loader-container {
+  .top-rated-loader-container {
     position: absolute;
     left: 11.53%;
     right: 11.46%;
-    top: 71.08%;
-    bottom: 16.35%;
-
+    top: 51.11%;
+    bottom: 37.35%;
     background: #0d0d0d;
     border-radius: 8px;
   }
-  .Original-loader {
+  .top-rated-loader {
     margin-top: 69px;
     margin-left: 538px;
   }
