@@ -1,6 +1,8 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+
+import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
 import './index.css'
@@ -12,12 +14,33 @@ const movieApiTrendingStatus = {
   inProgress: 'IN_PROGRESS',
 }
 
+function SampleNextArrow(props) {
+  const {onClick} = props
+  return (
+    <div className="arrow next-arrow">
+      <IoIosArrowForward onClick={onClick} />
+    </div>
+  )
+}
+
+function SamplePrevArrow(props) {
+  const {onClick} = props
+
+  return (
+    <div className="arrow prev-arrow">
+      <IoIosArrowBack onClick={onClick} />
+    </div>
+  )
+}
+
 const settings = {
   dots: false,
   infinite: false,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
   responsive: [
     {
       breakpoint: 1024,
