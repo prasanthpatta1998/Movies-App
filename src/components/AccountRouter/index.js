@@ -14,42 +14,35 @@ const AccountRouter = props => {
   return (
     <div className="account-details-container">
       <Header boolValue="false" />
-      <div className="account-container">
-        <h1 className="account-heading">Account</h1>
-        <hr className="horizontal-line" />
-        <div className="memberShip-container">
-          <p className="membership-heading">Member Ship</p>
-          <div className="member-account-details">
-            <p className="member-userName">userName</p>
-            <p className="member-password">
-              Password: <span>********</span>
-            </p>
-          </div>
-        </div>
-        <hr className="horizontal-line-2" />
-        <div className="memberShip-container">
-          <p className="membership-heading">Plan Details</p>
-          <div className="member-account-password-container">
-            <p className="member-premium">Premium</p>
-            <p className="quality-type">Ultra HD</p>
-          </div>
-        </div>
-        <hr className="horizontal-line-2" />
-        <button
-          type="button"
-          className="account-logout-button"
-          onClick={onLogoutTheUser}
-        >
-          Logout
-        </button>
+
+      <div className="account-header-background"> </div>
+      <h1 className="account-heading">Account</h1>
+      <hr className="horizontal-line" />
+      <p className="membership-heading">Member Ship</p>
+      <p className="member-userName">userName</p>
+      <p className="member-password">
+        Password: <span>********</span>
+      </p>
+      <hr className="horizontal-line-2" />
+      <p className="membership-plan-heading">Plan Details</p>
+      <p className="member-premium">Premium</p>
+      <p className="quality-type">Ultra HD</p>
+      <hr className="horizontal-line-3" />
+      <button
+        type="button"
+        className="account-logout-button"
+        onClick={onLogoutTheUser}
+      >
+        Logout
+      </button>
+
+      <div className="account-contact-icons-container">
+        <FaGoogle className="account-google-icon account-google" />
+        <FaTwitter className="account-google-icon account-twitter" />
+        <FaInstagram className="account-google-icon account-instagram" />
+        <FaYoutube className="account-google-icon account-facebook" />
       </div>
-      <div className="contact-icons-container">
-        <FaGoogle className="google-icon" />
-        <FaTwitter className="google-icon" />
-        <FaInstagram className="google-icon" />
-        <FaYoutube className="google-icon" />
-      </div>
-      <p className="contact-heading">Contact</p>
+      <p className="account-contact-heading">Contact Us</p>
     </div>
   )
 }

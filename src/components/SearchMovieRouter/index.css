@@ -2,6 +2,7 @@
   background-color: #131313;
   height: 640px;
   width: 360px;
+  position: absolute;
 }
 
 .search-ul-item {
@@ -126,14 +127,11 @@
   }
 
   .search-ul-item {
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-    margin-top: 135px;
-    margin-left: 165px;
+    position: absolute;
+    left: 11.53%;
+    right: 9%;
+    top: 13.18%;
     max-height: 764px;
-    width: 1110px;
   }
 
   .search-image {
@@ -143,6 +141,7 @@
 
   .search-movie-image {
     margin-bottom: 24px;
+    margin-right: 30px;
   }
 
   .search-failure-view {
@@ -268,12 +267,13 @@
 
 @media screen and (min-width: 768px) {
   .search-pagination-buttons {
-    left: 44.72%;
-    right: 44.65%;
-    top: 79.44%;
-    bottom: 19.92%;
     height: 32px;
     width: 153px;
+    position: absolute;
+    left: 44.72%;
+    right: 44.65%;
+    top: 93.31%;
+    bottom: 5.57%;
   }
   .search-forward-button {
     height: 32px;

@@ -34,6 +34,7 @@
     top: 0%;
     bottom: 0%;
     z-index: 1;
+    width: 1440px;
   }
 }
 
@@ -121,6 +122,7 @@
   width: 20px;
   cursor: pointer;
   outline: none;
+  padding-left: 0px;
 }
 
 .hamburg-close-image {
@@ -274,4 +276,8 @@
     height: 20px;
     width: 20px;
   }
+}
+
+.link-decoration {
+  text-decoration: none;
 }

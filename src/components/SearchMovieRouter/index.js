@@ -47,6 +47,7 @@ class SearchMovieRouter extends Component {
       this.setState({
         searchResults: newList,
         searchState: movieApiSearchStatus.success,
+        searchPaginationList: newList.slice(0, 16),
       })
     } else {
       this.setState({searchState: movieApiSearchStatus.failure})

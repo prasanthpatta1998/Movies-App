@@ -88,7 +88,7 @@ class Header extends Component {
       <>
         <nav className="header-container">
           <div className="movies-hamburg-container">
-            <Link to="/">
+            <Link to="/" className="link-decoration">
               <img
                 src="https://res.cloudinary.com/duezhxznc/image/upload/v1676713243/Group_7399_vkfpk3.png"
                 alt="login website logo"
@@ -114,13 +114,13 @@ class Header extends Component {
           </div>
           {smHamburger && (
             <ul className="sm-tabs-container">
-              <Link to="/">
+              <Link to="/" className="link-decoration">
                 <li className="hamburg-items">Home</li>
               </Link>
-              <Link to="/popular">
+              <Link to="/popular" className="link-decoration">
                 <li className="hamburg-items">Popular</li>
               </Link>
-              <Link to="/account">
+              <Link to="/account" className="link-decoration">
                 <li className="hamburg-items">Account</li>
               </Link>
               <li className="hamburg-items-1">
@@ -137,17 +137,17 @@ class Header extends Component {
         </nav>
         <nav className="md-header-container">
           <ul className="md-movies-hamburg-container">
-            <Link to="/">
+            <Link to="/" className="link-decoration">
               <img
                 src="https://res.cloudinary.com/duezhxznc/image/upload/v1676713243/Group_7399_vkfpk3.png"
                 alt="login website logo"
                 className="md-home-movies-heading"
               />
             </Link>
-            <Link to="/">
+            <Link to="/" className="link-decoration">
               <li className="md-hamburg-items">Home</li>
             </Link>
-            <Link to="/popular">
+            <Link to="/popular" className="link-decoration">
               <li className="md-hamburg-items-2">Popular</li>
             </Link>
           </ul>
@@ -155,7 +155,7 @@ class Header extends Component {
             {searchFunction === 'true'
               ? this.renderSearchInput()
               : this.renderMdSearchIcon()}
-            <Link to="/account">
+            <Link to="/account" className="link-decoration">
               <img
                 src="https://res.cloudinary.com/duezhxznc/image/upload/v1676874683/Avatar_ywnmti.png"
                 alt="profile"
