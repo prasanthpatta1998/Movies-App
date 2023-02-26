@@ -20,7 +20,7 @@ const Home = () => (
       <FaInstagram className="home-google-icon home-instagram" />
       <FaYoutube className="home-google-icon home-facebook" />
     </div>
-    <p className="home-contact-heading">Contact</p>
+    <p className="home-contact-heading">Contact Us</p>
   </div>
 )
 

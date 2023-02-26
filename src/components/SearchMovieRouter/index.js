@@ -125,7 +125,7 @@ class SearchMovieRouter extends Component {
         <div className="popular-loader-container">
           <img
             src="https://res.cloudinary.com/duezhxznc/image/upload/v1677171280/Group_7394_mnyo7m.png"
-            alt="failure"
+            alt="no movies"
             className="search-invalid-view"
           />
           <p className="search-invalid-data">

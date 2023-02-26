@@ -490,6 +490,10 @@
   /* identical to box height */
 }
 
+.google-icon:hover {
+  transform: scale(1.3);
+}
+
 .google {
   position: absolute;
   left: 34.72%;

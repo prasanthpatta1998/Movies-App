@@ -63,6 +63,7 @@ class Header extends Component {
       type="button"
       className="header-search-button"
       onClick={this.onChangeToSearchPage}
+      testid="searchButton"
     >
       <HiOutlineSearch className="search-icon" />
     </button>
@@ -73,6 +74,7 @@ class Header extends Component {
       type="button"
       className="md-header-search-button"
       onClick={this.onChangeToSearchPage}
+      testid="searchButton"
     >
       <HiOutlineSearch className="md-search-icon" />
     </button>
@@ -91,7 +93,7 @@ class Header extends Component {
             <Link to="/" className="link-decoration">
               <img
                 src="https://res.cloudinary.com/duezhxznc/image/upload/v1676713243/Group_7399_vkfpk3.png"
-                alt="login website logo"
+                alt="website logo"
                 className="home-movies-heading"
               />
             </Link>
@@ -140,7 +142,7 @@ class Header extends Component {
             <Link to="/" className="link-decoration">
               <img
                 src="https://res.cloudinary.com/duezhxznc/image/upload/v1676713243/Group_7399_vkfpk3.png"
-                alt="login website logo"
+                alt="website logo"
                 className="md-home-movies-heading"
               />
             </Link>

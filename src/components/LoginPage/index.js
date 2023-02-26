@@ -13,8 +13,11 @@ class LoginPage extends Component {
   }
 
   getLoginTheUser = jwtToken => {
+    const {username, password} = this.state
     const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {expires: 7})
+    localStorage.setItem('username', username)
+    localStorage.setItem('password', password)
     history.replace('/')
   }
 

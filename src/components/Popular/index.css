@@ -184,6 +184,10 @@
     line-height: 21px;
   }
 
+  .popular-google-icon:hover {
+    transform: scale(1.3);
+  }
+
   .popular-google {
     left: 45%;
     right: 53.75%;

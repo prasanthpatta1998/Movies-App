@@ -146,7 +146,7 @@ class Popular extends Component {
           <FaInstagram className="popular-google-icon popular-instagram" />
           <FaYoutube className="popular-google-icon popular-facebook" />
         </div>
-        <p className="popular-contact-heading">Contact</p>
+        <p className="popular-contact-heading">Contact Us</p>
       </>
     )
   }

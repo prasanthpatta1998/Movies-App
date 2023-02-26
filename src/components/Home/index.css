@@ -137,6 +137,10 @@
   /* identical to box height */
 }
 
+.home-google-icon:hover {
+  transform: scale(1.3);    
+}
+
 .home-google {
   position: absolute;
   left: 34.72%;

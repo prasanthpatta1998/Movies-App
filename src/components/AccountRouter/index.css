@@ -368,6 +368,10 @@
 
   color: #ffffff;
 }
+
+.account-google-icon:hover {
+  transform: scale(1.3);
+}
 .account-google {
   position: absolute;
   left: 34.72%;

@@ -11,6 +11,8 @@ const AccountRouter = props => {
     history.replace('/login')
   }
 
+  const userName = localStorage.getItem('username')
+
   return (
     <div className="account-details-container">
       <Header boolValue="false" />
@@ -19,7 +21,7 @@ const AccountRouter = props => {
       <h1 className="account-heading">Account</h1>
       <hr className="horizontal-line" />
       <p className="membership-heading">Member Ship</p>
-      <p className="member-userName">userName</p>
+      <p className="member-userName">{`${userName}@gmail.com`}</p>
       <p className="member-password">
         Password: <span>********</span>
       </p>

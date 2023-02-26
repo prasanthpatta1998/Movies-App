@@ -102,7 +102,6 @@ class MovieDetailsRouter extends Component {
       budget,
       genres,
       overview,
-      posterPath,
       releaseDate,
       runtime,
       spokenLanguages,
@@ -124,16 +123,11 @@ class MovieDetailsRouter extends Component {
     }))
 
     const releasedDate = format(new Date(releaseDate), 'Mo MMMM yyyy')
-    console.log(runtime)
 
     return (
       <>
         <img src={backdropPath} alt={title} className="detail-movie-image" />
-        <img
-          src={posterPath}
-          alt={title}
-          className="detail-movie-poster-image"
-        />
+
         <h1 className="specific-movie-name">{title}</h1>
         <p className="runtime">{`${hours}h ${minutes}m`}</p>
         <p className="movieCertificate">{`${movieCertificate}`}</p>
@@ -174,7 +168,7 @@ class MovieDetailsRouter extends Component {
           <FaInstagram className="google-icon instagram" />
           <FaYoutube className="google-icon facebook" />
         </div>
-        <p className="contact-heading-movie">Contact</p>
+        <p className="contact-heading-movie">Contact Us</p>
       </>
     )
   }
